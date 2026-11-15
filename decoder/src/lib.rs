@@ -281,7 +281,7 @@ impl Table {
 
 // NOTE follows `parser::Type`
 #[derive(Debug, Clone, PartialEq)]
-enum Arg<'t> {
+pub enum Arg<'t> {
     /// Bool
     Bool(bool),
     F32(f32),

@@ -137,6 +137,14 @@ impl<'t> Frame<'t> {
         defmt_parser::parse(self.format, ParserMode::ForwardsCompatible).unwrap()
     }
 
+    pub fn args(&self) -> &[Arg<'t>] {
+        &self.args
+    }
+
+    pub fn timestamp_args(&self) -> &[Arg<'t>] {
+        &self.timestamp_args
+    }
+
     pub fn level(&self) -> Option<Level> {
         self.level
     }
